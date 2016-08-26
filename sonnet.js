@@ -6,16 +6,17 @@
 // Set the content of the sonnet div with the new string
 
 var sonnetDiv = document.getElementById("sonnet").innerHTML;
-console.log(sonnetDiv);
+// console.log("original sonnet: ", sonnetDiv);
 
-console.log(sonnetDiv.indexOf("orphans"));
+var startingPosition = sonnetDiv.indexOf("orphans");
+console.log("starting position of orphans: ", startingPosition);
 
-console.log(sonnetDiv.length);
+// console.log("length of div: ", sonnetDiv.length);
 
 var sonnetDiv1 = sonnetDiv.replace("winter", "yuletide");
-console.log(sonnetDiv1);
-var sonnetDiv2 = sonnetDiv1.replace(/the/g, "a large");
-console.log(sonnetDiv2);
+// console.log("Just winter replaced: ", sonnetDiv1);
+var sonnetDiv2 = sonnetDiv1.replace(/the /gi, "a large ");
+// console.log("winter and the replaced: ", sonnetDiv2);
 
-sonnetDiv = sonnetDiv2;
-console.log(sonnetDiv);
+document.getElementById("sonnet").innerHTML = sonnetDiv2
+
